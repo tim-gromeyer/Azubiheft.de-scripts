@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         Azubiheft.de auto select 8 hours
+// @name         Azubiheft.de - auto select 8 hours
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Auto select 8 hours in a azubiheft.de report
 // @author       Tim Gromeyer <tim.gromeyer@gmail.com>
 // @match        *://www.azubiheft.de/Azubi/Tagesbericht.aspx?*
-// @icon         https://www.azubiheft.de/Icons/favicon-32x32.png?v=1
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=azubiheft.de
 // @grant        none
 // ==/UserScript==
 
