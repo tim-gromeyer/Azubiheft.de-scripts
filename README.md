@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-- Auto-select 8 hours](#auto-select-8-hours)
+- [Auto-select 8 hours](#auto-select-8-hours)
 
 ## Auto-select 8 hours
 
