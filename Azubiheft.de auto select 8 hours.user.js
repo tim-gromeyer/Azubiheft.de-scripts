@@ -1,0 +1,32 @@
+// ==UserScript==
+// @name         Azubiheft.de auto select 8 hours
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Auto select 8 hours in a azubiheft.de report
+// @author       Tim Gromeyer <tim.gromeyer@gmail.com>
+// @match        *://www.azubiheft.de/Azubi/Tagesbericht.aspx?*
+// @icon         https://www.azubiheft.de/Icons/favicon-32x32.png?v=1
+// @grant        none
+// ==/UserScript==
+
+function onClassChange(element, callback) {
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (
+        mutation.type === 'attributes' &&
+        mutation.attributeName === 'class'
+      ) {
+        callback(mutation.target);
+      }
+    });
+  });
+  observer.observe(element, { attributes: true });
+  return observer.disconnect;
+}
+
+var dialog = document.getElementById("Taetigkeit_Pannel");
+onClassChange(dialog, (node) => {
+  if (node.classList.contains('msgBoxShow')) {
+      let time = document.getElementById("cmdDauer");
+      time.textContent = '08:00'
+}});
